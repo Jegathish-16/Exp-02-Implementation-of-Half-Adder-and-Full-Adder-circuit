@@ -43,6 +43,16 @@ RegisterNumber:  212221230041
 ```
 #### Half Adder:
 ```
+module ex2(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
+```
+
+#### FUll Adder:
+```
 module ex2(A,B,Cin,S,Cout);
 input A,B,Cin;
 output S,Cout;
@@ -55,26 +65,8 @@ or(Cout,E,F);
 endmodule
 ```
 
-#### FUll Adder:
-```
-module ex2(a,b,sum,carry);
-input a,b;
-output sum,carry;
-xor(sum,a,b);
-and(carry,a,b);
-endmodule
-```
-
 ### Output:
-## Half Adder:
-### RTL
-![output](half_rtl.png)
-### TIMING DIAGRAM
-![output](half_time.png)
-### TRUTH TABLE 
-![output](HALF_TT.png)
-
-## Full Adder:
+## HALF Adder:
 ### RTL
 ![output](full_rtl.png)
 ### TIMING DIAGRAM
@@ -83,5 +75,14 @@ endmodule
 
 ### TRUTH TABLE 
 ![output](FULL_TT.png)
+
+## FULL Adder:
+### RTL
+![output](half_rtl.png)
+### TIMING DIAGRAM
+![output](half_time.png)
+### TRUTH TABLE 
+![output](HALF_TT.png)
+
 ### Result:
 Thus, a half adder and full adder circuit is designed to verify its truth table in Quartus using Verilog programming.
